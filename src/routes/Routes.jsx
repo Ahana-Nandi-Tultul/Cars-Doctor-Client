@@ -26,7 +26,7 @@ const route = createBrowserRouter([
             },
             {
                 path: 'bookService/:id',
-                element: <BookServices></BookServices>,
+                element: <PrivateRoutes><BookServices></BookServices></PrivateRoutes>,
                 loader: ({params}) => fetch(`http://localhost:3000/services/${params.id}`)
             },
             {
