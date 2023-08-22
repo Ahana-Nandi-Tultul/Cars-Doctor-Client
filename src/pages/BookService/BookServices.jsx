@@ -27,7 +27,7 @@ const BookServices = () => {
             title
         }
 
-        fetch(`http://localhost:3000/booking`, {
+        fetch(`https://car-doctor-server-five-sigma.vercel.app/booking`, {
             method: "POST",
             headers: {
                 "content-type" : "application/json"

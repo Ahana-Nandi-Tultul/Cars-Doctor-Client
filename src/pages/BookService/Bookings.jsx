@@ -20,7 +20,7 @@ const Bookings = () => {
           }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/booking/${_id}`,{
+                fetch(`https://car-doctor-server-five-sigma.vercel.app/booking/${_id}`,{
                     method: "DELETE"
                 })
                 .then(res => res.json())
@@ -43,7 +43,7 @@ const Bookings = () => {
     const handleConfirm = _id => {
         const procced = confirm('Are you sure?');
         if(procced){
-            fetch(`http://localhost:3000/booking/${_id}`, {
+            fetch(`https://car-doctor-server-five-sigma.vercel.app/booking/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     "content-type" : "application/json"
@@ -65,7 +65,7 @@ const Bookings = () => {
         }
     }
 
-    const url = `http://localhost:3000/bookings?email=${user?.email}`;
+    const url = `https://car-doctor-server-five-sigma.vercel.app/bookings?email=${user?.email}`;
 
     useEffect(() => {
         fetch(url, {

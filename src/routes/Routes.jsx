@@ -27,7 +27,7 @@ const route = createBrowserRouter([
             {
                 path: 'bookService/:id',
                 element: <PrivateRoutes><BookServices></BookServices></PrivateRoutes>,
-                loader: ({params}) => fetch(`http://localhost:3000/services/${params.id}`)
+                loader: ({params}) => fetch(`https://car-doctor-server-five-sigma.vercel.app/services/${params.id}`)
             },
             {
                 path: '/myBooking',
